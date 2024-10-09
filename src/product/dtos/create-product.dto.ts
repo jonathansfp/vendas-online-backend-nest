@@ -1,5 +1,4 @@
-import { IsEnum, IsNumber, IsOptional, IsString } from 'class-validator';
-import { ProductType } from '../enum/product-type.enum';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class CreateProductDTO {
   @IsNumber()
@@ -34,8 +33,7 @@ export class CreateProductDTO {
   @IsNumber()
   diameter?: number;
 
-  @IsEnum(ProductType, { message: 'O tipo deve ser "product" ou "service".' })
-  type: ProductType;
+
 
 
 }
